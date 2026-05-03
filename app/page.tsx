@@ -19,9 +19,9 @@ export default function Hero() {
 				className="pointer-events-none absolute inset-0 overflow-hidden"
 			>
 				{/* Large orange orb — top right */}
-				<div className="absolute -top-32 -right-32 w-[520px] h-[520px] rounded-full bg-orange-500/20 dark:bg-orange-500/10 blur-[120px]" />
+				<div className="absolute -top-32 -right-32 w-130 h-130 rounded-full bg-orange-500/20 dark:bg-orange-500/10 blur-[120px]" />
 				{/* Smaller orb — bottom left */}
-				<div className="absolute -bottom-24 -left-24 w-[380px] h-[380px] rounded-full bg-orange-400/15 dark:bg-orange-400/8 blur-[100px]" />
+				<div className="absolute -bottom-24 -left-24 w-95 h-95 rounded-full bg-orange-400/15 dark:bg-orange-400/8 blur-[100px]" />
 				{/* Dot grid overlay */}
 				<div
 					className="absolute inset-0 opacity-[0.035] dark:opacity-[0.06]"
@@ -184,7 +184,7 @@ export default function Hero() {
 			<div
 				aria-hidden
 				className="pointer-events-none absolute bottom-0 left-0 right-0 h-32
-                   bg-gradient-to-t from-white dark:from-zinc-950 to-transparent"
+                   bg-linear-to-t from-white dark:from-zinc-950 to-transparent"
 			/>
 		</section>
 	);

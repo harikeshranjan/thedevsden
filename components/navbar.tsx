@@ -8,7 +8,7 @@ import { Show, SignInButton, UserButton } from "@clerk/nextjs";
 import { Button } from "./ui/button";
 
 const navLinks = [
-	{ label: "Blogs", href: "/blog" },
+	{ label: "Blogs", href: "/blogs" },
 	{ label: "About Me", href: "/about-me" },
 ];
 
@@ -32,10 +32,10 @@ export default function Navbar() {
 	return (
 		<header
 			className={[
-				"fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+				"fixed top-0 left-0 right-0 z-99 transition-all duration-300",
 				scrolled
 					? "bg-white/60 dark:bg-zinc-900/60 backdrop-blur-xl backdrop-saturate-150 border border-white/20 dark:border-white/10 shadow-lg"
-					: "bg-transparent border-b",
+					: "bg-transparent border-b backdrop-blur-xl backdrop-saturate-150",
 			].join(" ")}
 		>
 			<nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -93,6 +93,9 @@ export default function Navbar() {
 					{/* ── Mobile: Toggle + Hamburger ── */}
 					<div className="flex md:hidden items-center gap-2">
 						<ModeToggle />
+						<Show when="signed-in">
+							<UserButton />
+						</Show>
 						<button
 							onClick={() => setMenuOpen((prev) => !prev)}
 							aria-label={menuOpen ? "Close menu" : "Open menu"}
